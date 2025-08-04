@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS化診断 - 2分で完了！あなたの業務、SaaS化できるか無料診断</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SaaS化診断</h1>
+            <p class="lead">2分で完了。あなたの業務、SaaS化できるか無料診断</p>
+        </header>
+
+        <form id="diagnosisForm">
+            <!-- 質問1: 業種 -->
+            <div class="question-group">
+                <label class="question-label">1. あなたの業種を教えてください</label>
+                <select name="industry" required>
+                    <option value="">選択してください</option>
+                    <option value="IT・ソフトウェア">IT・ソフトウェア</option>
+                    <option value="製造業">製造業</option>
+                    <option value="小売・EC">小売・EC</option>
+                    <option value="サービス業">サービス業</option>
+                    <option value="金融・保険">金融・保険</option>
+                    <option value="医療・介護">医療・介護</option>
+                    <option value="教育">教育</option>
+                    <option value="不動産">不動産</option>
+                    <option value="その他">その他</option>
+                </select>
+            </div>
+
+            <!-- 質問2: 従業員数 -->
+            <div class="question-group">
+                <label class="question-label">2. 従業員数を教えてください</label>
+                <select name="employees" required>
+                    <option value="">選択してください</option>
+                    <option value="1-10人">1-10人</option>
+                    <option value="11-50人">11-50人</option>
+                    <option value="51-100人">51-100人</option>
+                    <option value="101-500人">101-500人</option>
+                    <option value="501人以上">501人以上</option>
+                </select>
+            </div>
+
+            <!-- 質問3: 繰り返し業務の有無 -->
+            <div class="question-group">
+                <label class="question-label">3. 毎日・毎週繰り返し行っている業務はありますか？</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="repetitive_tasks" value="はい、たくさんある" required>
+                        はい、たくさんある
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="repetitive_tasks" value="はい、いくつかある" required>
+                        はい、いくつかある
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="repetitive_tasks" value="あまりない" required>
+                        あまりない
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="repetitive_tasks" value="ほとんどない" required>
+                        ほとんどない
+                    </label>
+                </div>
+            </div>
+
+            <!-- 質問4: Excel・スプレッドシート使用頻度 -->
+            <div class="question-group">
+                <label class="question-label">4. Excel・スプレッドシートをどのくらい使用していますか？</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="spreadsheet_usage" value="毎日使用" required>
+                        毎日使用
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="spreadsheet_usage" value="週に数回" required>
+                        週に数回
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="spreadsheet_usage" value="月に数回" required>
+                        月に数回
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="spreadsheet_usage" value="ほとんど使わない" required>
+                        ほとんど使わない
+                    </label>
+                </div>
+            </div>
+
+            <!-- 質問5: 顧客管理方法 -->
+            <div class="question-group">
+                <label class="question-label">5. 現在の顧客管理方法を教えてください（複数選択可）</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="customer_management" value="Excel・スプレッドシート">
+                        Excel・スプレッドシート
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="customer_management" value="紙の台帳">
+                        紙の台帳
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="customer_management" value="専用システム（CRM等）">
+                        専用システム（CRM等）
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="customer_management" value="メール・チャット">
+                        メール・チャット
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="customer_management" value="特に管理していない">
+                        特に管理していない
+                    </label>
+                </div>
+            </div>
+
+            <!-- 質問6: 業務効率化への関心 -->
+            <div class="question-group">
+                <label class="question-label">6. 業務効率化・自動化への関心度を教えてください</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="efficiency_interest" value="非常に関心がある" required>
+                        非常に関心がある
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="efficiency_interest" value="関心がある" required>
+                        関心がある
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="efficiency_interest" value="どちらでもない" required>
+                        どちらでもない
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="efficiency_interest" value="あまり関心がない" required>
+                        あまり関心がない
+                    </label>
+                </div>
+            </div>
+
+            <!-- 質問7: 月間IT予算 -->
+            <div class="question-group">
+                <label class="question-label">7. 月間のIT・ソフトウェア予算はどのくらいですか？</label>
+                <select name="it_budget" required>
+                    <option value="">選択してください</option>
+                    <option value="1万円未満">1万円未満</option>
+                    <option value="1-5万円">1-5万円</option>
+                    <option value="5-10万円">5-10万円</option>
+                    <option value="10-50万円">10-50万円</option>
+                    <option value="50万円以上">50万円以上</option>
+                </select>
+            </div>
+
+            <!-- 質問8: データ活用状況 -->
+            <div class="question-group">
+                <label class="question-label">8. 業務データを分析・活用していますか？</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="data_utilization" value="積極的に活用している" required>
+                        積極的に活用している
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="data_utilization" value="ある程度活用している" required>
+                        ある程度活用している
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="data_utilization" value="あまり活用していない" required>
+                        あまり活用していない
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="data_utilization" value="全く活用していない" required>
+                        全く活用していない
+                    </label>
+                </div>
+            </div>
+
+            <!-- 質問9: 課題感 -->
+            <div class="question-group">
+                <label class="question-label">9. 現在感じている業務課題を選択してください（複数選択可）</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="challenges" value="手作業が多く時間がかかる">
+                        手作業が多く時間がかかる
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="challenges" value="情報共有がうまくいかない">
+                        情報共有がうまくいかない
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="challenges" value="ミスや漏れが発生しやすい">
+                        ミスや漏れが発生しやすい
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="challenges" value="データがバラバラで管理しづらい">
+                        データがバラバラで管理しづらい
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="challenges" value="業務の属人化が進んでいる">
+                        業務の属人化が進んでいる
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="challenges" value="特に課題は感じていない">
+                        特に課題は感じていない
+                    </label>
+                </div>
+            </div>
+
+            <!-- 質問10: リモートワーク対応 -->
+            <div class="question-group">
+                <label class="question-label">10. リモートワーク・在宅勤務を実施していますか？</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="remote_work" value="全面的に実施" required>
+                        全面的に実施
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="remote_work" value="一部実施" required>
+                        一部実施
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="remote_work" value="今後実施予定" required>
+                        今後実施予定
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="remote_work" value="実施していない" required>
+                        実施していない
+                    </label>
+                </div>
+            </div>
+
+            <!-- 質問11: 補助金・助成金への関心 -->
+            <div class="question-group">
+                <label class="question-label">11. IT導入補助金などの活用に関心はありますか？</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="subsidy_interest" value="非常に関心がある" required>
+                        非常に関心がある
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="subsidy_interest" value="関心がある" required>
+                        関心がある
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="subsidy_interest" value="よくわからない" required>
+                        よくわからない
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="subsidy_interest" value="関心がない" required>
+                        関心がない
+                    </label>
+                </div>
+            </div>
+
+            <!-- 質問12: SaaS化したい業務（自由記述） -->
+            <div class="question-group">
+                <label class="question-label">12. 特にシステム化・SaaS化したい業務があれば教えてください（任意）</label>
+                <textarea name="specific_needs" rows="4" placeholder="例：見積書作成、在庫管理、シフト管理など"></textarea>
+            </div>
+
+            <!-- 質問13: 導入時期 -->
+            <div class="question-group">
+                <label class="question-label">13. システム導入を検討している時期を教えてください</label>
+                <select name="timeline" required>
+                    <option value="">選択してください</option>
+                    <option value="すぐにでも">すぐにでも</option>
+                    <option value="3ヶ月以内">3ヶ月以内</option>
+                    <option value="6ヶ月以内">6ヶ月以内</option>
+                    <option value="1年以内">1年以内</option>
+                    <option value="未定">未定</option>
+                </select>
+            </div>
+
+            <!-- 質問14: 連絡先情報 -->
+            <div class="question-group">
+                <label class="question-label">14. 診断結果の送付先（任意）</label>
+                <div class="contact-fields">
+                    <input type="text" name="company" placeholder="会社名">
+                    <input type="text" name="name" placeholder="お名前">
+                    <input type="email" name="email" placeholder="メールアドレス">
+                    <input type="tel" name="phone" placeholder="電話番号">
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">診断結果を確認する</button>
+        </form>
+
+        <!-- 結果表示エリア -->
+        <div id="resultSection" class="result-section" style="display: none;">
+            <h2>診断結果</h2>
+            <div class="result-content">
+                <div class="result-item">
+                    <h3>SaaS化適性度</h3>
+                    <div class="score-display">
+                        <span id="saasScore" class="score">-</span>
+                        <span class="score-unit">%</span>
+                    </div>
+                    <p id="saasMessage" class="result-message"></p>
+                </div>
+                <div class="result-item">
+                    <h3>補助金活用可能性</h3>
+                    <div class="score-display">
+                        <span id="subsidyScore" class="score">-</span>
+                        <span class="score-unit">%</span>
+                    </div>
+                    <p id="subsidyMessage" class="result-message"></p>
+                </div>
+            </div>
+            <div class="next-action">
+                <h3>次のステップ</h3>
+                <p>無料相談で、あなたの業務に最適なSaaS化プランをご提案します</p>
+                <a href="https://calendly.com/" target="_blank" class="consultation-btn">無料相談を予約する</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
